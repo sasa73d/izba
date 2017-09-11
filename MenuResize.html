@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MenuResize</title>
+<style>
+body {
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+}
+/* poslije tab-a row ponistavamo uticaj float property-a */
+/* .row::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
+.menu {
+    width: 25%;
+    position: fixed;
+    float: left;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffccb3;
+}
+.content {
+    margin-left: 25%;
+    float: left;
+}
+.menu-block {
+    /* background-color: red; */
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu-list {
+    padding: 0px;
+    margin: 0px;
+}
+.menu-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    overflow: auto;
+}
+.active {
+     background-color: #ff7733;
+}
+.menu-link:hover:not(.active) {
+    border: 1px solid black;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    porder: 2px solid black;
+    background-color: #ffbb99;
+    min-width: 160px;
+    z-index: 1;
+    left: 70%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+}
+.dropdown {
+    position: relative;
+}
+.dropdown:hover .dropdown-content {
+     display: block;
+}
+.drop-link {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+.drop-link:hover {
+    border: 1px solid black;
+}
+.slike {
+    float: left;
+    padding: 5px;
+    width: 33.332%;
+    border: 1px solid black;
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+.slike:hover {
+    opacity: 1.0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-wight: bold;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.opis {
+    text-align: center;
+    padding: 15px;
+}
+@media screen and (max-width: 1000px) {
+    .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    }
+    .menu-link {
+         float: left;
+         padding: 25px;
+    }
+    .content {
+         margin-left: 0px;
+    }
+    .dropdown-content {
+        left: 29%;
+        top: 70px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .slike {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .menu-link {
+        float: none;
+        text-align: center;
+    }
+     .slike {
+        width: 100%;
+    }
+    .dropdown-content {
+        width: 100%;
+        left:0%;
+    }
+} 
+.mod {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+.modCont {
+   background-color: #fefefe;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #888;
+    width: 60%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="menu">
+    <ul class="menu-block">
+      <li class="menu-list"><a class="menu-link active" href="#">Home</a></li>
+      <li class="menu-list"><a class="menu-link" href="#">News</a></li>
+      <li class="menu-list"><a class="menu-link" href="#">Contacts</a></li>
+      <li class="menu-list dropdown"><a class="menu-link" href="#">About</a>
+        <div class="dropdown-content">
+          <a class="drop-link" href="#">Link 1</a>
+          <a class="drop-link" href="#">Link 1</a>
+          <a class="drop-link" href="#">Link 1</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div onclick="myShow(0)" class="slike">
+        <a href="#">
+          <img class="imgDiv" src="slike/priroda1.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+     <div onclick="myShow(1)" class="slike" >
+        <a href="#">
+          <img class="imgDiv" src="slike/priroda2.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+     <div onclick="myShow(2)" class="slike">
+        <a href="#">
+          <img class="imgDiv" src="slike/priroda3.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+     <div onclick="myShow(3)" class="slike">
+        <a href="#">
+          <img class="imgDiv" src="slike/priroda4.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+     <div onclick="myShow(4)" class="slike">
+        <a href="#">
+          <img class="imgDiv"src="slike/priroda5.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+     <div onclick="myShow(5)" class="slike">
+        <a href="#">       
+        <img class="imgDiv" src="slike/priroda6.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+  </div>
+</div>
+<br>
+<div id="idMod" class="mod">
+  <div  class="modCont">
+    <span onclick="myClose()" class="close">&times;</span>
+    <img id="img" src="#" alt="Slika prirode">
+  </div>
+</div>
+<script >
+var modal = document.getElementById('idMod');
+var img = document.getElementById('img');
+function myShow(br) {
+    modal.style.display = "block";
+    if (br == 0) {img.src = 'slike/priroda1.jpg';}
+    if (br == 1) {img.src = 'slike/priroda2.jpg';}
+    if (br == 2) {img.src = 'slike/priroda3.jpg';}
+    if (br == 3) {img.src = 'slike/priroda4.jpg';}
+    if (br == 4) {img.src = 'slike/priroda5.jpg';}
+    if (br == 5) {img.src = 'slike/priroda6.jpg';}
+}
+function myClose() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

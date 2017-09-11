@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!-- prilagodjavamo stranicu razlicitim velicinama ekrana -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moja prva stranica</title>
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6ff;
+}
+/* ukljucujemo padding i border u totalnu sirinu i visinu svakog taga*/
+* {
+    box-sizing: border-box;
+}
+/* poslije tab-a row ponistavamo uticaj float property-a*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*podesavamo sadrzaj u row box-u za mobilne telefone*/
+[class*="col-"] {
+    width: 100%;
+    padding: 15px;
+    float: left;
+}
+/* podesavanje header i footer  box-a*/
+.header, .footer {
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: white;
+    border-radius: 60px 0px;
+    text-align: center;
+}
+/* podesavanje za sve p tagove na stranici */
+p {
+    text-indent: 10%;
+}
+/* podesavanje menija */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.link-menu {
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #999999;
+    display: block;
+    color: white;
+    margin: 5px;
+    border-radius: 60px 0px;
+}
+.link-menu:hover:not(active) {
+    background-color: #737373;
+}
+.active {
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+    margin: 5px;
+    border-radius: 60px 0px;
+    background: #1a1a1a; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, #d9d9d9, #1a1a1a); /* Safari */
+    background: -o-radial-gradient(circle, #d9d9d9, #1a1a1a); /* Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, #d9d9d9, #1a1a1a); /* Firefox 3.6 to 15 */
+    background: radial-gradient(circle, #d9d9d9, #1a1a1a); /* Standard syntax */
+}
+/* podesavanje 2 div taga clase sl1 */
+.row .sl1 {
+    float: left;
+    /* overflow: hidden;*/
+     /*position: relative;  */      
+}
+/* podesavanje sadrzaja gdje su slike */
+.slike {
+    float: left;
+    border: 1px solid black;
+    margin-bottom: 60px;
+    opacity: 0.7;
+}
+.slike:hover {
+    opacity: 1.0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-wight: bold;
+} 
+img {
+    width: 100%;
+    height: auto;
+}
+.opis {
+    text-align: center;
+    padding: 15px;
+}
+/* podesavanje sadrzaja gdje je text */
+.left, .center {
+    padding: 15px;
+    background-color: #999999;
+    color: white;
+    border-radius: 60px 0px;
+}
+.center {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+}
+/* podesavanje parametara za form */
+form[class="login"] {
+    background-color: #999999;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 60px 0px;
+}
+input[type="text"]{
+    width: 80%;
+    margin: 5px;
+}
+input[type="password"]{
+    width: 80%;
+    margin: 5px;
+}
+input[type="submit"]{
+    width: 80%;
+    margin: 5px;
+}
+/*podesavanje stranice u odnosu na velicinu ekrana*/
+@media screen and (min-width: 750px) {
+/*za tablete*/
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    .center {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+    }
+}
+@media screen and (min-width: 1000px) {
+/*za desktop racunare*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .center {
+        -webkit-column-count: 3; /* Chrome, Safari, Opera */
+        -moz-column-count: 3; /* Firefox */
+        column-count: 3;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Ovdje ide naslov stranice</h1>
+</div>
+<!-- glavni div pox sa sadrzajem stranice -->
+<div class="row">
+  <!-- meni -->
+  <div class="col-3 col-m-4 menu">
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a class="link-menu" href="JavaResize.html">Resize</a></li>
+      <li><a class="link-menu" href="MenuResize.html">Menu</a></li>
+      <li><a class="link-menu" href="#">Link4</a></li>
+    </ul>
+    <form class="login" action="">
+       <label><b>Username:</b></label>
+       <input type="text" placeholder="Enter Username" name="uname" required><br>
+       <label><b>Password :</b></label>
+       <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+       <input type="submit" value="Login"><br><br>
+       <input type="checkbox" checked="checked"> Remember me
+    </form>
+  </div>
+  <!-- glavni sadrzaj stranice -->
+    <div class="col-3 col-m-4 sl1">
+      <div class="slike">
+        <a href="slike/priroda1.jpg">
+          <img src="slike/priroda1.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+      <div class="slike">
+           <a href="slike/priroda4.jpg">
+             <img src="slike/priroda4.jpg" alt="Slika prirode">
+          </a>
+        <div class="opis">Ovdje ide opis slike</div>
+        </div>
+    </div> 
+   <div class="col-3 col-m-4 sl1"> 
+      <div class="slike">
+        <a href="slike/priroda3.jpg">
+          <img src="slike/priroda3.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+      </div>
+      <div class="slike">
+        <a href="slike/priroda4.jpg">
+          <img src="slike/priroda4.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+      </div>
+    </div>
+  <!-- sadrzaj sa lijeve strane -->
+  <div class="col-3 col-m-6">
+    <div class="left">
+      <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+       <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+       <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+    </div>
+  </div>
+
+  <!-- drugi sadrzaj nu sredini -->
+  <div class="col-12 col-m-6">
+    <div class="center">
+      Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+    </div>
+  </div>
+  </div>
+<div class="footer">
+  <p>ovdje postavljamo neke informacije o stranici</p>
+</div>
+</body>
+</html>

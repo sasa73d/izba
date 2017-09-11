@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<meta charset="ISO-8859-1">
+<title>JavaScript Resize</title>
+<style>
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/* ukljucujemo padding i border u totalnu sirinu i visinu svakog taga*/
+* { box-sizing: border-box;}
+/* podesavamo osnovne karakterisike sadrzaja u stranici*/
+.cell {
+   float: left;
+   border: 1px solid red;
+   width: 25%;
+   overflow: auto;
+   padding: 5px;
+}
+.slike {
+    float: left;
+}
+.slike img {
+    width: 100%;
+    height: auto;
+}
+.header {
+    padding: 20px;
+}
+</style>
+</head>
+<body onload="myAllOnResize()" onresize="myAllOnResize()">
+<div class="header">
+  <h1 id="resize"></h1>
+  <h4 id="divresize"></h4>
+</div>
+<div class="row">
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       </p>
+  </div>
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+  </div>
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+  </div>
+  <div class="cell">
+    <div class="slike">
+        <a href="#">
+          <img src="slike/priroda1.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+      <div class="slike">
+           <a href="#">
+             <img src="slike/priroda4.jpg" alt="Slika prirode">
+          </a>
+        <div class="opis">Ovdje ide opis slike</div>
+        </div>
+        <div class="slike">
+        <a href="#">
+          <img src="slike/priroda3.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+      </div>
+  </div>
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+  </div>
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+  </div>
+  <div class="cell">
+    <h1>Neki naslov</h1>
+      <p>Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise. 
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.
+       Ovdje ce mo napisati neki text. Pa onda opet jos nesto i samo da se nesto napise.</p>
+  </div>
+  <div class="cell">
+    <div class="slike">
+        <a href="#">
+          <img src="slike/priroda1.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+     </div>
+      <div class="slike">
+           <a href="#">
+             <img src="slike/priroda4.jpg" alt="Slika prirode">
+          </a>
+        <div class="opis">Ovdje ide opis slike</div>
+        </div>
+        <div class="slike">
+        <a href="#">
+          <img src="slike/priroda3.jpg" alt="Slika prirode">
+        </a>
+        <div class="opis">Ovdje ide opis slike</div>
+      </div>
+  </div>
+</div>
+<script >
+//definisemo div elemente kojima cemo manipulisati
+var slElement = document.getElementsByClassName('slike');
+var cellElement = document.getElementsByClassName('cell');
+var w = window.innerWidth;
+var h = window.innerHeight;
+//osnovna funkcija koja se poziva radi resize-a stranice
+//ona pokrece tri pod funkcije
+function myAllOnResize() {
+	 myPrikaz();
+	 myResizeWidth();
+	 myResHigFit();	 
+}
+//regulisemo width div taga koji sadrzi slike
+function myResWidSl() {
+	var w = window.innerWidth;
+	var s;
+	
+	if (w <= 1000 && w >= 700) {
+		for (s = 0; s < slElement.length; s++) {
+            slElement[s].style.width = '33.332%';
+		}
+    } 
+	else {
+    		for (s = 0; s < slElement.length; s++) {
+                slElement[s].style.width = '100%';
+        	}
+    }
+}
+//regulisemo height div tagova clase cell prilikom resize-a width
+function myResHigFit() {
+	
+	var w = window.innerWidth;
+	var z; 
+    var optimSize = 0;
+    var currentHeight = 0;
+	var resizeVal = 0;
+	var finalResize = 0;
+    for (z = 0; z < cellElement.length; z++) {
+        optimSize = (cellElement[z].children[cellElement[z].children.length - 1].offsetTop - cellElement[z].offsetTop)
+        + cellElement[z].children[cellElement[z].children.length - 1].offsetHeight + 25; 
+        currentHeight = cellElement[z].offsetHeight;
+        resizeVal = currentHeight - optimSize;
+        if (finalResize > resizeVal || z == 0) {
+        	finalResize = resizeVal;
+        }
+    }
+    for (z = 0; z < cellElement.length; z++) {
+    	if (w < 700) {
+    		cellElement[z].style.height = 'auto';
+    	}
+    	else if (w <= 1000 && w >= 700) {
+    		debugger
+    	    	if (z == 3 || z == 7) {
+    	    		cellElement[z].style.height = 'auto'
+    	    	}
+    	    	else {
+    	    		cellElement[z].style.height = (cellElement[z].offsetHeight - finalResize) + 'px';
+    	    		
+    	    	}
+    	}
+    	else {
+    	    cellElement[z].style.height = (cellElement[z].offsetHeight - finalResize) + 'px';
+    		
+    	}
+    }	 
+}
+//regulisemo width i polozaj div tagova klase cell prilikom resize-a
+function myResizeWidth() {
+	var w = window.innerWidth;
+	var s;
+	for (s = 0; s < cellElement.length; s++) {
+	    if (w > 1000) {
+            cellElement[s].style.width = '25%';
+            myResizeHeight();
+	    } 
+	    else if (w <= 1000 && w >= 700) {
+	    	if (s == 3 || s == 7) {
+	            cellElement[s].style.width = '100%';
+	    	} else {
+	    		cellElement[s].style.width = '33.332%';	 
+	    		myResizeHeight();
+	    	}
+	    	
+	    } 
+	    else if (w <= 700 && w >= 500) {
+	    	myResizeHeight();
+	        cellElement[s].style.width = '50%'; 
+	    	myResizeHeight();
+	    } 
+	    else if (w < 500) {
+            cellElement[s].style.width = '100%';
+    	
+	    }
+	}
+	myResWidSl();
+}
+//regulisemo ispis na zaglavlju
+function myPrikaz() {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var h1Element = document.getElementById('resize');
+	var h4Element = document.getElementById('divresize');
+    h1Element.innerHTML = 'Width: ' + w + ' x ' + ' Height: ' + h;
+    h4Element.innerHTML = ' Height 1 div: '+ myGetDivSize(0) 
+    + ' Height 2 div: '+ myGetDivSize(1) + ' Height 3 div: '+ myGetDivSize(2) 
+    + ' Height 4 div: '+ myGetDivSize(3) + ' Height 5 div: '+ myGetDivSize(4)
+    + ' Height 6 div: '+ myGetDivSize(5) + ' Height 7 div: '+ myGetDivSize(6)
+    + ' Height 8 div: '+ myGetDivSize(7);
+}
+//pod funkcija za ispis nazaglavlju (vraca height za naznaceni div element)
+function myGetDivSize(br) {
+	return cellElement[br].offsetHeight;
+}
+//pod funkcija koja vraca vrijednos height div elementa clase cell (vraca vrijednost elementa sa najvecim height)
+function  myEqualHeight(con) {
+	var cellH = 0;
+	var brDiv = 0;
+	var z;
+	for (z = 0; z < cellElement.length; z++) {
+		if (cellH < cellElement[z].offsetHeight) {
+			cellH = cellElement[z].offsetHeight;
+			brDiv = z;
+		}
+	}
+	if(con == true) {
+	    return cellH;
+	}
+	else {
+		return brDiv;
+	}
+}
+//funkcija izjednacava vrijednost height svih div elemenata clase cell sa najvecom height vrijednoscu koju sadrzi neki element
+function myResizeHeight() {
+	var z = 0;
+    var cellElement = document.getElementsByClassName('cell');
+    var height = myEqualHeight(true);
+    for (z = 0; z < cellElement.length; z++) {
+        cellElement[z].style.height = height + 'px';
+    }
+    
+}
+
+</script>
+</body>
+</html>
