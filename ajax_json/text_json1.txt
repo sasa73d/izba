@@ -1,0 +1,62 @@
+[
+    {
+    "ID": 1,
+    "firstName":"John", 
+    "lastName":"Doe",
+    "age": 30,
+    "favoriteFood": ["cevapi", "raznici", "pica"],
+    "cars": [
+        {"model":"Audi", "prodYear":2005, "colors": ["grey", "pink"]},
+        {"model":"Ford", "prodYear":2010, "colors": ["white", "blue"]},
+        {"model":"Fiat", "prodYear":2012, "colors": ["green", "red"]}
+        ]
+     },
+     {
+     "ID": 2,
+    "firstName":"Simon", 
+    "lastName":"Crowther",
+    "age": 44,
+    "favoriteFood": ["pica", "pita", "kobasice"],
+    "cars": [
+        {"model":"Lada", "prodYear":2009, "colors": ["green", "grey"]},
+        {"model":"Zastava", "prodYear":2012, "colors": ["white", "black"]},
+        {"model":"BMW", "prodYear":2002, "colors": ["grey", "pink"]}
+        ]
+     },
+     {
+     "ID": 3,
+    "firstName":"Tom", 
+    "lastName":"Cruise",
+    "age": 39,
+    "favoriteFood": ["spagti", "musaka", "boranija"],
+    "cars": [
+        {"model":"Saab", "prodYear":2014, "colors": ["black", "green"]},
+        {"model":"Peugeot", "prodYear":2008, "colors": ["yellow", "blue"]},
+        {"model":"Toyota", "prodYear":2017, "colors": ["black", "pink"]}
+        ]
+     },
+     {
+     "ID": 4,
+    "firstName":"Nicole", 
+    "lastName":"Kidman",
+    "age": 27,
+    "favoriteFood": ["pica", "cevapi", "corba"],
+    "cars": [
+        {"model":"Renault", "prodYear":2007, "colors": ["red", "grey"]},
+        {"model":"Volkswagen", "prodYear":2011, "colors": ["white", "pink"]},
+        {"model":"Jaguar", "prodYear":2005, "colors": ["yellow", "purple"]}
+        ]
+     },
+     {
+     "ID": 5,
+    "firstName":"Williame", 
+    "lastName":"Lyons",
+    "age": 33,
+    "favoriteFood": ["corba", "snicle", "pica"],
+    "cars": [
+        {"model":"Ford", "prodYear":2013, "colors": ["blue", "white"]},
+        {"model":"Peugeot", "prodYear":2003, "colors": ["pink", "red"]},
+        {"model":"Lada", "prodYear":2010, "colors": ["grey", "green"]}
+        ]
+     }
+ ]

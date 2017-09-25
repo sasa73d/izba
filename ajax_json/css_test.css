@@ -1,0 +1,129 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana;
+    background-color: rgba(255, 255, 0, 0.35);
+}
+* {
+    box-sizing: border-box;
+}
+.menu {
+    width: 25%;
+    float: left;
+    position: fixed;
+    height: 100%;
+    margin: 0px;
+    background-color: #b0a7a7;
+}
+.content {
+    margin-left: 25%;
+    float: left;
+    width: 75%;
+    padding: 0px;
+}
+.menu-block {
+    list-style-type: none;
+    margin:  0px;
+    padding: 0px;
+}
+.menu-list {
+    display: block;
+    padding: 10px 20px;
+    color: yellow;
+    font-variant: small-caps;
+}
+.menu-list:hover {
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+.tab-xml {
+    float: left;
+    width: 50%;
+}
+.tab-json {
+    float: left;
+    width: 50%;
+}
+.content-xml {
+    float: left;
+    width: 50%;
+}
+.content-json {
+    float: left;
+    width: 50%;
+}
+
+#cd-text {
+    margin: 10% 5%;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#json-text {
+    margin: 10% 5%;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+table {
+    width: 100%;
+    margin: 5px;
+}
+tr:nth-child(even) {
+    background-color: #d9d9d9;
+}
+table tr:hover {
+    background-color: #ffb3b3;
+}
+th {
+    background-color: #8c8c8c;
+    color: white;
+}
+#txt-ajax, #demo {
+    text-align: center;
+}
+input[id*="cd"] {
+    width: 20%;
+    margin: 10% 10%;
+}
+input[id="btn-txt"] {
+    margin-left: 45%;
+}
+.ajax-xml, .ajax-json {
+    display: none;
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    }
+    .menu-list {
+         float: left;
+         padding: 20px;
+    }
+    .content {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .menu-list {
+    width: 100%;
+    }
+    .tab-xml {
+     width: 100%;
+    }
+    .content-xml {
+        width: 100%;
+    }
+    .tab-json {
+     width: 100%;
+    }
+    .content-json {
+        width: 100%;
+    }
+} 
+

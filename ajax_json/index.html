@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax and JSON</title>
+        <link rel="stylesheet" href="css_test.css">
+        <script src="ajax_json.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="menu">
+                <ul class="menu-block">
+                    <li class="menu-list" onclick="menuClick(0)">Ajax with TEXT</li>
+                    <li class="menu-list" onclick="menuClick(1)">Ajax with XML</li>
+                    <li class="menu-list" onclick="menuClick(2)">Ajax with JSON</li>
+                    <li class="menu-list">Ajax with</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="ajax-txt">
+                    <h1 id="txt-ajax">ACCESS FROM TEXT FILE - AJAX</h1>
+                    <p id="demo">Let AJAX change this text.</p>
+                    <input type="button" id="btn-txt" value="Change Content">
+                </div>
+                <div class="ajax-xml">
+                    <div class="tab-xml">
+                        <table id="table-xml" onclick="rowIndex(this)"></table>
+                    </div>
+                    <div class="content-xml">
+                        <div id="cd-text"><p></p></div><br>
+                        <input type="button" id="cd-left-xml" value="<<">
+                        <input type="button" id="cd-right-xml" value=">>">
+                    </div>
+                </div>
+                <div class="ajax-json">
+                    <div class="tab-json">
+                        <table id="table-json"></table>
+                    </div>
+                    <div class="content-json">
+                        <div id="json-text"></div><br>
+                        <input type="button" id="cd-left-json" value="<<">
+                        <input type="button" id="cd-right-json" value=">>">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
