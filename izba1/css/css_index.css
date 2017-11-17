@@ -1,0 +1,72 @@
+.margin-set {
+    margin-bottom: 0px;
+}
+
+.body-color {
+    min-height: 500px;
+    background-color: #e6e6e6;
+}
+.shadow-div {
+    background-color: #ffffb3;
+    padding: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.shadow-div:hover {
+    color: #8600b3;
+}
+.posts-div {
+    padding: 7px;
+}
+.footer-set {
+    color: white;
+    background-color: black;
+}
+.templates img {
+    width: 100%;
+}
+.cards {
+    height: 120px
+}
+table {
+    width: 100%;
+    table-layout:fixed;
+    margin:5px;;
+}
+th, td {
+    padding:5px 10px;
+    /*border:1px solid #000;*/
+}
+tr:nth-child(even) {
+    background-color: lightyellow;
+}
+thead, tfoot {
+    background:#f9f9f9;
+    display:table;
+    width:100%;
+    width:calc(100% - 18px);
+}
+table tr:hover {
+    background-color: #ffb3b3;
+}
+th {
+    background-color: #8c8c8c;
+    color: white;
+}
+tbody {
+    height:400px;
+    overflow:auto;
+    overflow-x:hidden;
+    display:block;
+    width:100%;
+}
+tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+.focus-row {
+    border: 3px solid black;
+}
+.tr-row {
+    cursor: pointer;
+}

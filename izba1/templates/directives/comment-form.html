@@ -1,0 +1,48 @@
+
+<div >
+    <form ng-submit="showAddComment = addComment(x.id)" class="form-group col-sm-12" name="inputForm" novalidate>
+        <div class="form-group col-sm-6">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email"
+                       ng-model="email"
+                       placeholder="Email"
+                       required
+                       autofocus>
+                <span ng-show="inputForm.email.$dirty && inputForm.email.$invalid">
+                           <span ng-show="inputForm.email.$error.required">Email is required </span>
+                           <span ng-show="inputForm.email.$error.email">Invalid email address.</span>
+                        </span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="title" name="title"
+                       placeholder="Title"
+                       ng-model="name"
+                       ng-minlength="4"
+                       ng-maxlength="20"
+                       required>
+                <span ng-show="inputForm.title.$dirty && inputForm.title.$invalid">
+                           <span ng-show="inputForm.title.$error.required">Titler is required </span>
+                           <span ng-show="inputForm.title.$error.minlength">Title must be over 4 characters </span>
+                           <span ng-show="inputForm.title.$error.maxlength">Title must not exceed 20 characters</span>
+                        </span>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+                    <textarea class="form-control" rows="4" placeholder="Comment" name="comment"
+                              ng-model="comment"
+                              ng-minlength="4"
+                              ng-maxlength="120"
+                              required></textarea>
+            <span ng-show="inputForm.comment.$dirty && inputForm.comment.$invalid">
+                       <span ng-show="inputForm.comment.$error.required">Comment is required </span>
+                       <span ng-show="inputForm.comment.$error.minlength">Comment must be over 4 characters </span>
+                       <span ng-show="inputForm.comment.$error.maxlength">Comment must not exceed 20 characters</span>
+                    </span>
+        </div>
+        <div class="form-group col-md-12">
+            <button type="submit" class="btn btn-primary"
+                    ng-disabled="inputForm.$invalid">Add</button>
+        </div>
+    </form>
+</div>
+

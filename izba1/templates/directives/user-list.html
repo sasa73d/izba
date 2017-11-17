@@ -1,0 +1,11 @@
+
+<div class="col-sm-12">
+    <br>
+    <label>SEARCH TROUGH USERS : </label>
+    <select class="form-control input-lg" id="users"
+            ng-options="x as x.username for x in users track by x.id"
+            ng-model="selected"
+            ng-change="passUser()">
+        <option></option>
+    </select>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="col-sm-12">
+    <div class="col-sm-8">
+        <br>
+        <label>IMAGES FROM ALBUM : '{{album}}' - ({{(photos | filter: {title: search}).length}})</label>
+        <input type="text" class="form-control input-lg"
+               id="search"
+               ng-model="search"
+               placeholder="search images by title"><br>
+    </div>
+</div>
+<div class="row templates">
+    <div class="col-xs-12 col-sm-4 col-md-3 "
+         dir-paginate="x in photos | filter: {title: search} | itemsPerPage: 12"
+         ng-click="showImg = !showImg">
+        <img class="shadow-div" src="{{x.thumbnailUrl}}"  alt="Card image cap">
+        <div class="cards">
+            <h4 class="card-title">Image br.: {{x.id}}</h4>
+            <p class="card-text">{{x.title}} - <a href="{{x.url}}">view</a></p>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <dir-pagination-controls
+                direction-links="true"
+                boundary-links="true"
+                class="posts-div"></dir-pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div>
+    <div class="col-sm-12">
+        <<br>
+        <input type="text" class="form-control input-lg"
+               id="search"
+               ng-model="search"
+               placeholder="search albums by title"><br>
+    </div>
+    <table id="table-album">
+        <thead>
+            <tr>
+                <th>ID</th><th>Albums  (<span>{{(albums | filter: {title: search} | filter: {userId: userNameId}: true).length}}</span>)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-click="clickRow($event, (albums | filter: {id: x.id} : true))" class="tr-row" id="tr-{{x.id}}"
+                ng-repeat="x in albums | filter: {title: search} | filter: {userId: userNameId}: true">
+                <td style="width:20%">{{x.id}}</td>
+                <td style="width:80%">{{x.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
